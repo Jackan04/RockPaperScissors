@@ -26,7 +26,7 @@ function getComputerChoice(){
 
 
 function getHumanChoice(){
-    let humanChoice = prompt("Enter one of the following:\n1.Rock\n2.Paper\n3.Scissors").toLowerCase(); // Make input lowercase which prevents faulty input.
+    // let humanChoice = prompt("Enter one of the following:\n1.Rock\n2.Paper\n3.Scissors").toLowerCase(); // Make input lowercase which prevents faulty input.
     return humanChoice;
     
 }
@@ -69,7 +69,7 @@ function playRound(humanChoice, computerChoice){
 
 function playGame(){
     
-    while(humanScore < 4 && computerScore < 4){
+    while(humanScore < 3 && computerScore < 3){
         let humanChoice = getHumanChoice();
         let computerChoice = getComputerChoice();
         playRound(humanChoice, computerChoice); 
