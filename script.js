@@ -1,12 +1,10 @@
 // Variables
-let randomNumber;
 let computerScore = 0;
 let humanScore = 0;
-let winner;
-
 
 
 function getComputerChoice(){
+    let randomNumber;
     randomNumber = Math.random();
     let computerChoice;
     
@@ -26,13 +24,14 @@ function getComputerChoice(){
 
 
 function getHumanChoice(){
-    // let humanChoice = prompt("Enter one of the following:\n1.Rock\n2.Paper\n3.Scissors").toLowerCase(); // Make input lowercase which prevents faulty input.
+    let humanChoice = prompt("Enter one of the following:\n1.Rock\n2.Paper\n3.Scissors").toLowerCase(); // Make input lowercase which prevents faulty input.
     return humanChoice;
     
 }
 
 function playRound(humanChoice, computerChoice){
-
+        let winner; 
+        
         console.log("You choose: " + humanChoice);
         console.log("Computer choose " + computerChoice);
 
@@ -87,6 +86,6 @@ function playGame(){
   
 }
 
-playGame();
+// playGame();
 
 
