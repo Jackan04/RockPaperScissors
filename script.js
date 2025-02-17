@@ -24,8 +24,8 @@ buttonContainer.addEventListener("click", function(event){
             humanChoice = "paper";
         break;
         
-        case "sciccors":
-            humanChoice = "sciccors";
+        case "scissors":
+            humanChoice = "scissors";
         break;
     }
 
@@ -62,7 +62,6 @@ function playRound(humanChoice, computerChoice){
         const displayComputerScore = document.createElement("p");
         const champion = document.createElement("h3");
         const replayButton = document.createElement("button");
-
         replayButton.textContent = "Replay";
         
         results.textContent = "";
@@ -104,6 +103,7 @@ function playRound(humanChoice, computerChoice){
         
         if (humanScore === 3) {
             champion.textContent = "You are the champion!";
+            champion.setAttribute("style", "color: #2F943B");
             buttonContainer.style.pointerEvents = "none";
             results.append(champion);
             buttonContainer.style.pointerEvents = "none";
@@ -114,6 +114,7 @@ function playRound(humanChoice, computerChoice){
             });
         } else if (computerScore === 3) {
             champion.textContent = "Computer is the champion!";
+            champion.setAttribute("style", "color: #A30D30");
             results.append(champion);
             buttonContainer.style.pointerEvents = "none";
             results.append(replayButton);

@@ -1,0 +1,5 @@
+To do
+
+- Optimize for mobile devices
+- Improve the scoreboard and make it divide content
+- Add details and description on GitHub
