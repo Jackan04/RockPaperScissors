@@ -2,8 +2,11 @@
 let computerScore = 0;
 let humanScore = 0;
 const results = document.querySelector("#results");
-
 const buttonContainer = document.querySelector("#button-container");
+const scoreContainer = document.querySelector("#scores");
+const choiceContainer = document.querySelector("#choices");
+const roundResultContainer = document.querySelector("#round-results");
+
 
 
 buttonContainer.addEventListener("click", function(event){
@@ -58,7 +61,10 @@ function playRound(humanChoice, computerChoice){
         const displayHumanScore = document.createElement("p");
         const displayComputerScore = document.createElement("p");
         const champion = document.createElement("h3");
+        const replayButton = document.createElement("button");
 
+        replayButton.textContent = "Replay";
+        
         results.textContent = "";
         
         
@@ -100,13 +106,26 @@ function playRound(humanChoice, computerChoice){
             champion.textContent = "You are the champion!";
             buttonContainer.style.pointerEvents = "none";
             results.append(champion);
+            buttonContainer.style.pointerEvents = "none";
+            results.append(replayButton);
+
+            replayButton.addEventListener("click", function(){
+                location.reload();
+            });
         } else if (computerScore === 3) {
             champion.textContent = "Computer is the champion!";
             results.append(champion);
             buttonContainer.style.pointerEvents = "none";
+            results.append(replayButton);
+
+            replayButton.addEventListener("click", function(){
+                location.reload();
+            });
         }
     
 }
+
+
 
 
 
