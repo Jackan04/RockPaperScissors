@@ -3,7 +3,6 @@
 :root{
     --primary-color: #E3D3F4;
     --secondary-color: #FFF5D8;
-    --accent-color: #D5F5D9;
     --padding: 15px;
     --padding-large: 30px;
     --margin: 20px;
@@ -18,11 +17,6 @@
 }
 
 body{
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; */
-
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -66,8 +60,23 @@ button{
 }
 
 button:hover{
-    box-shadow: 0 4px 15px rgba(227, 211, 244, 1);
+    box-shadow: 0px 4px 10px rgba(20%, 20%, 20%, 0.4);
+    cursor: pointer;
 }
+
+#rock{
+    background-color: #D5F5D9;
+}
+
+#paper{
+    background-color: #CCDEFC;
+}
+
+#scissors{
+    background-color: #FFE5D3;
+}
+
+
 
 #instructions-container{
     display: flex;
@@ -81,12 +90,15 @@ button:hover{
 #results{
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
     background-color: var(--secondary-color);
     padding: var(--padding-large);
     border-radius: var(--border-radius);
-    min-width: 230px;
-    min-height: 150px;
+    
+}
+
+#button-container{
+    margin: var(--margin);
 }
 
 #champion{
